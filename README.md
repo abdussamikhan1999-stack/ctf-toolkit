@@ -24,6 +24,15 @@ each one was actually tested, not just installed and assumed working:
   programmatically; useful for writing your own analysis scripts.
 - **requests** — for scripting against web-based CTF challenges/APIs.
 
+`disasm_entry.py` in this repo is a real, working example combining
+`pyelftools` + `capstone` — not just "the imports succeeded." Run it
+against any binary (`python3 disasm_entry.py /usr/bin/ls`) and it finds
+the real ELF entry point and disassembles the actual first instructions
+there. Tested against `/usr/bin/ls` and `/usr/bin/cat` — both correctly
+produced the textbook glibc `_start` sequence
+(`endbr64; xor ebp,ebp; mov r9,rdx; ...`), confirming the ELF parsing and
+disassembly are both actually correct, not just "didn't crash."
+
 **Not installed**: `pwntools` (the standard CTF exploit-dev framework) —
 its `unicorn` dependency needs to compile a C extension, which needs
 `cmake` (not present, needs `sudo`). Once you've run the `sudo dnf`
