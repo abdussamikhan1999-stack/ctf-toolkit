@@ -78,6 +78,15 @@ standard first stop; don't overthink where to begin.
 Follow-ups once Bandit feels easy: **PentesterLab**, **VulnHub**,
 **Root-Me** (all linked in cyberpunk-privacy-notes' Security section).
 
+## More tools, catalogued separately
+
+[pentest-scripts-notes](https://github.com/abdussamikhan1999-stack/pentest-scripts-notes)
+covers the top 20 repos under GitHub's `pentest-scripts` topic (frameworks
+like Sn1per, AD tooling like Invoke-ADEnum, recon/OSINT scripts, web PoCs,
+etc.) — kept as its own repo rather than duplicated here since it's a
+survey of third-party tools, not something installed/verified on this
+machine the way the list above is.
+
 ## A note on scope
 
 Every tool here is dual-use — the same tools defenders and red-teamers
